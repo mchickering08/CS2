@@ -1,0 +1,10 @@
+README
+mary_chickering_electiondata
+
+The user enters a file name and the program returns the top 10 valuable words with their values. Then it creates a csv file in excel with the top 10. 
+
+Input: file name
+Output: top ten key and value
+
+Sample input: kamala_new.txt
+Sample output: {'president': 17, 'america': 17, 'trump': 15, 'people': 14, 'security': 11, 'freedom': 11, 'mother': 10, 'donald': 10, 'always': 9, 'class': 9}
