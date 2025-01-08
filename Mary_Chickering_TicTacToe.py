@@ -118,15 +118,16 @@ def play_again(XO):
     Returns:
         None
     """
-    winner = False #Sets winner to false
     print("Player", XO, "won!") #Prints the winner
-    go_again = input("Would you like to play again? (yes or no)") #Asks if user wants to play again
-    if go_again == "yes":
-        main() #If player says yes, goes back to main
-    elif go_again == "no":
-        print("Okay bye.")
-        sys.exit() #If player says no, exits the program
-    return winner
+    while True:
+        go_again = input("Would you like to play again? (yes or no)") #Asks if user wants to play again
+        if go_again == "yes":
+            main() #If player says yes, goes back to main
+        elif go_again == "no":
+            print("Okay bye.")
+            sys.exit() #If player says no, exits the program
+        else:
+            print("Please enter yes or no")
 def winner(box, XO):
     """
     Checks if the given player (XO) has won the game.
@@ -197,7 +198,7 @@ def main():
             continue
         else: #IF user does not say yes or no
             print("I literally gave you the options to choose from. TRY AGAIN") #Tell them to try again and circle back to the top of loop
-            continue
+            break
     while True:
         player_amount = input("One or two players?") #Ask user if they want one or two player game mode
         if player_amount.lower() != "one" and player_amount.lower() != "two" and player_amount.lower() != "1" and player_amount.lower() != "2": #IF player does not equal one or two
