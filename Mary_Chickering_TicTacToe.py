@@ -179,26 +179,24 @@ def end_game(box):
     else:
         return False
 
-play_game = input("Do you want to play Tic Tac Toe? (yes or no)") #Asks user if they want to play (outside the main so it does not repeat opening question when player plays again)
+def introduction():
+     while True:
+        play_game = input("Do you want to play Tic Tac Toe? (yes or no)") #Asks user if they want to play (outside the main so it does not repeat opening question when player plays again)
+        if play_game.lower() == "yes": #If user says yes            print("YAY")
+            break
+        elif play_game.lower() == "no": #If the user says no
+            print("Say yes. Try again") #Tell them to try again and circle back to the top of loop
+        else: #IF user does not say yes or no
+            print("I literally gave you the options to choose from. TRY AGAIN") #Tell them to try again and circle back to the top of loop
 def main():
     """
     Main function to start and play the game
     """
-    while True:
-        if play_game.lower() == "yes": #If user says yes
-            box = [ #Creates the Tic Tac Toe board as a 3x3 list
+    box = [ #Creates the Tic Tac Toe board as a 3x3 list
                     [1,2,3],
                     [4,5,6],
                     [7,8,9]
                 ]
-            print("YAY")
-            break
-        elif play_game.lower() == "no": #If the user says no
-            print("Say yes. Try again") #Tell them to try again and circle back to the top of loop
-            continue
-        else: #IF user does not say yes or no
-            print("I literally gave you the options to choose from. TRY AGAIN") #Tell them to try again and circle back to the top of loop
-            break
     while True:
         player_amount = input("One or two players?") #Ask user if they want one or two player game mode
         if player_amount.lower() != "one" and player_amount.lower() != "two" and player_amount.lower() != "1" and player_amount.lower() != "2": #IF player does not equal one or two
@@ -214,4 +212,5 @@ def main():
         elif player_amount.lower() == "two": #If the player chooses "two" for the game mode/amt of players
             choose_starting_player(box, player1_XO, player2_XO, "user") #Runs choose_starting_player function for player vs. player
             break
+introduction() #Introduces the game
 main() #Runs the main
