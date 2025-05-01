@@ -1,1 +1,1 @@
-# CS2
+Terminal-based version of the classic Battleship game written in Python. It supports both Player vs Player and Player vs computer modes, with selectable difficulty for the computer. The game includes sound effects for hits and misses a clean interface using emojis.
