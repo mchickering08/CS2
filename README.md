@@ -1,1 +1,1 @@
-# CS2
+Portfolio of programs created in CS 2
